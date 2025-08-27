@@ -1,0 +1,94 @@
+.copyButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 500;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.copyButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.5);
+}
+
+.icon {
+    font-size: 0.875em;
+}
+
+/* Sizes */
+.xs {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+.sm {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.md {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.lg {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.125rem;
+}
+
+/* Variants */
+.ghost {
+    background: transparent;
+    color: #64748b;
+}
+
+.ghost:hover {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.outline {
+    background: transparent;
+    color: #667eea;
+    border: 1px solid #667eea;
+}
+
+.outline:hover {
+    background: #667eea;
+    color: white;
+}
+
+.solid {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+.solid:hover {
+    background: #e2e8f0;
+}
+
+/* Dark theme */
+[data-theme="dark"] .ghost {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .ghost:hover {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .solid {
+    background: #334155;
+    color: #e2e8f0;
+    border-color: #475569;
+}
+
+[data-theme="dark"] .solid:hover {
+    background: #475569;
+}

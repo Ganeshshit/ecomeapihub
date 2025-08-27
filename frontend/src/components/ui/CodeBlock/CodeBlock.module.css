@@ -1,0 +1,132 @@
+.codeBlock {
+    background: #1e293b;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #334155;
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #0f172a;
+    border-bottom: 1px solid #334155;
+}
+
+.language {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.copyButton {
+    background: transparent;
+    border: 1px solid #475569;
+    color: #94a3b8;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.copyButton:hover {
+    background: #334155;
+    color: #e2e8f0;
+    border-color: #64748b;
+}
+
+.pre {
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+    background: transparent;
+}
+
+.code {
+    font-family: inherit;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #e2e8f0;
+}
+
+.line {
+    display: flex;
+    align-items: flex-start;
+}
+
+.lineNumber {
+    color: #64748b;
+    margin-right: 1rem;
+    font-size: 0.75rem;
+    min-width: 2rem;
+    text-align: right;
+    user-select: none;
+    opacity: 0.6;
+}
+
+.lineContent {
+    flex: 1;
+    white-space: pre;
+}
+
+/* Syntax highlighting simulation */
+.code :global(.keyword) {
+    color: #c678dd;
+}
+
+.code :global(.string) {
+    color: #98c379;
+}
+
+.code :global(.number) {
+    color: #d19a66;
+}
+
+.code :global(.comment) {
+    color: #5c6370;
+    font-style: italic;
+}
+
+.code :global(.function) {
+    color: #61afef;
+}
+
+/* Light theme */
+[data-theme="light"] .codeBlock {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+}
+
+[data-theme="light"] .header {
+    background: #f1f5f9;
+    border-bottom-color: #e2e8f0;
+}
+
+[data-theme="light"] .language {
+    color: #64748b;
+}
+
+[data-theme="light"] .copyButton {
+    color: #64748b;
+    border-color: #d1d5db;
+}
+
+[data-theme="light"] .copyButton:hover {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+[data-theme="light"] .code {
+    color: #1e293b;
+}
+
+[data-theme="light"] .lineNumber {
+    color: #94a3b8;
+}

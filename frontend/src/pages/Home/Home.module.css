@@ -1,0 +1,41 @@
+.homePage {
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Add subtle parallax effect */
+.homePage::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 70%, rgba(120, 219, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .homePage {
+        overflow-x: hidden;
+    }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .homePage::before {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(120, 119, 198, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 119, 198, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 70%, rgba(120, 219, 255, 0.05) 0%, transparent 50%);
+}

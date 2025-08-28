@@ -1,0 +1,64 @@
+/* // src/components/layout/Layout/Layout.module.css */
+.appLayout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-background, #ffffff);
+}
+
+.main {
+    flex: 1;
+    padding-top: 70px;
+    /* Header height */
+    min-height: calc(100vh - 70px);
+}
+
+.docsLayout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-background, #ffffff);
+}
+
+.docsContainer {
+    display: flex;
+    flex: 1;
+    padding-top: 70px;
+    min-height: calc(100vh - 70px);
+}
+
+.docsMain {
+    flex: 1;
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .docsContainer {
+        flex-direction: column;
+    }
+
+    .docsMain {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main,
+    .docsContainer {
+        padding-top: 60px;
+        /* Smaller header on mobile */
+    }
+
+    .docsMain {
+        padding: 1rem 0.5rem;
+    }
+}
+
+/* Dark theme */
+[data-theme="dark"] .appLayout,
+[data-theme="dark"] .docsLayout {
+    background: var(--color-background-dark, #1a1a2e);
+}

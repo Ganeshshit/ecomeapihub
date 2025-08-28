@@ -1,3 +1,5 @@
+
+// src/pages/Home/Home.jsx
 import React from 'react';
 import { SEOHead } from '../../components/common/SEO';
 import { Hero } from '../../components/home/Hero';
@@ -16,13 +18,15 @@ const Home = () => {
                 keywords="ecommerce api, developer apis, rest api, frontend development, react apis"
             />
 
-            <main className={styles.main}>
+            <div className={styles.homeContent}>
                 <Hero />
-                <Features />
+                <section id="features">
+                    <Features />
+                </section>
                 <QuickDemo />
                 <Testimonials />
                 <CallToAction />
-            </main>
+            </div>
         </div>
     );
 };
